@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lung Cancer Prediction</title>
+    <link rel="stylesheet" href="/static/style.css">
+
+</head>
+<body>
+
+<div class="container">
+    <h2>Lung Cancer Prediction</h2>
+
+    <input type="number" id="gender" placeholder="Gender (1=Male, 0=Female)">
+    <input type="number" id="age" placeholder="Age">
+
+    <input type="number" id="smoking" placeholder="Smoking (1/2)">
+    <input type="number" id="yellow_fingers" placeholder="Yellow Fingers (1/2)">
+    <input type="number" id="anxiety" placeholder="Anxiety (1/2)">
+    <input type="number" id="peer_pressure" placeholder="Peer Pressure (1/2)">
+    <input type="number" id="chronic_disease" placeholder="Chronic Disease (1/2)">
+    <input type="number" id="fatigue" placeholder="Fatigue (1/2)">
+    <input type="number" id="allergy" placeholder="Allergy (1/2)">
+    <input type="number" id="wheezing" placeholder="Wheezing (1/2)">
+    <input type="number" id="alcohol_consuming" placeholder="Alcohol Consuming (1/2)">
+    <input type="number" id="coughing" placeholder="Coughing (1/2)">
+    <input type="number" id="shortness_of_breath" placeholder="Shortness of Breath (1/2)">
+    <input type="number" id="swallowing_difficulty" placeholder="Swallowing Difficulty (1/2)">
+    <input type="number" id="chest_pain" placeholder="Chest Pain (1/2)">
+
+    <button onclick="predict()">Predict</button>
+
+    <h3 id="result"></h3>
+</div>
+
+<script src="/static/script.js"></script>
+</body>
+</html>
