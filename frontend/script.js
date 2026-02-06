@@ -18,7 +18,7 @@ function predict() {
         chest_pain: Number(document.getElementById("chest_pain").value)
     };
 
-    fetch("http://127.0.0.1:8000/predict", {
+    fetch("https://lung-cancer-prediction-project.onrender.com/predict", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -34,3 +34,4 @@ function predict() {
         console.error(err);
     });
 }
+
