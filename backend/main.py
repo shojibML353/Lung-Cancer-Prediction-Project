@@ -26,15 +26,19 @@ app = FastAPI(
     version="1.0"
 )
 
-# ==============================
-# CORS (Frontend connect)
-# ==============================
+origins = [
+    "https://lung-cancer-prediction-project.onrender.com",
+    "http://localhost",
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],   # production এ specific domain দিবে
+    allow_origins=origins,       # allow specific origins
     allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
+    allow_methods=["*"],         # allow POST, GET, etc
+    allow_headers=["*"],         # allow Content-Type etc
 )
 
 # ==============================
@@ -99,3 +103,4 @@ def predict(data: LungCancerInput):
         "prediction": int(prediction),
         "result": "lung cancer Detected" if prediction == 1 else "No lung cancer Detected"
     }
+
